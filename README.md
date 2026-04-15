@@ -83,3 +83,8 @@ Parses Figma's `.fig` binary format using [@open-pencil/core](https://github.com
 ```
 
 No Figma API key, no network, no running app needed.
+
+## Reference
+
+- https://github.com/silships/figma-cli
+- https://github.com/dannote/figma-use
