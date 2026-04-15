@@ -36,3 +36,8 @@ report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 # Claude Code & task manager (local only)
 .claude/
 .nod/
+
+# Bun auto-generated root files
+CLAUDE.md
+index.ts
+test-import.ts
