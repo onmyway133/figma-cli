@@ -1,0 +1,37 @@
+{
+  "name": "figma-cli",
+  "version": "0.1.0",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "bin": {
+    "figma-cli": "./src/index.ts"
+  },
+  "scripts": {
+    "dev": "bun run src/index.ts",
+    "start": "bun run src/index.ts",
+    "test:fixture": "bun scripts/create-test-fig.ts",
+    "test:pages": "bun run src/index.ts pages test-fixtures/sample.fig --pretty",
+    "test:tokens": "bun run src/index.ts tokens test-fixtures/sample.fig --pretty",
+    "test:components": "bun run src/index.ts components test-fixtures/sample.fig --pretty",
+    "test:inspect": "bun run src/index.ts inspect test-fixtures/sample.fig --pretty",
+    "test:node-tree": "bun run src/index.ts node-tree test-fixtures/sample.fig --pretty",
+    "test:text": "bun run src/index.ts text test-fixtures/sample.fig --pretty",
+    "test:colors": "bun run src/index.ts colors test-fixtures/sample.fig --pretty",
+    "test:fonts": "bun run src/index.ts fonts test-fixtures/sample.fig --pretty",
+    "test:instances": "bun run src/index.ts instances test-fixtures/sample.fig --pretty",
+    "test:layout": "bun run src/index.ts layout test-fixtures/sample.fig --pretty",
+    "test:images": "bun run src/index.ts images test-fixtures/sample.fig --pretty"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@open-pencil/core": "^0.11.6",
+    "citty": "^0.2.2",
+    "picocolors": "^1.1.1"
+  }
+}
