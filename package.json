@@ -1,13 +1,16 @@
 {
   "name": "figma-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "module": "index.ts",
   "type": "module",
-  "private": true,
+  "files": [
+    "dist"
+  ],
   "bin": {
-    "figma-cli": "./src/index.ts"
+    "figma-cli": "./dist/index.js"
   },
   "scripts": {
+    "build": "bun build src/index.ts --outfile dist/index.js --target bun",
     "dev": "bun run src/index.ts",
     "start": "bun run src/index.ts",
     "test:fixture": "bun scripts/create-test-fig.ts",
