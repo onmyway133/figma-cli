@@ -4,11 +4,20 @@ Read Figma `.fig` files — extract design tokens, components, and styles as JSO
 
 No auth, no network, no Figma running required. Parse directly from a local `.fig` file.
 
-## Setup
+## Install
 
 ```bash
-bun install
+bunx @onmyway133/figma-cli --help
 ```
+
+Or install globally:
+
+```bash
+bun install -g @onmyway133/figma-cli
+figma-cli --help
+```
+
+Requires [Bun](https://bun.sh).
 
 ## Getting a `.fig` file
 
@@ -18,22 +27,22 @@ In Figma desktop: **File → Save local copy...** → saves a `.fig` file to dis
 
 ```bash
 # List all pages
-bun run src/index.ts pages design.fig
+figma-cli pages design.fig
 
 # Extract design tokens (variables: colors, spacing, typography)
-bun run src/index.ts tokens design.fig
-bun run src/index.ts tokens design.fig --page "Tokens"
+figma-cli tokens design.fig
+figma-cli tokens design.fig --page "Tokens"
 
 # List components
-bun run src/index.ts components design.fig
-bun run src/index.ts components design.fig --page "Components"
+figma-cli components design.fig
+figma-cli components design.fig --page "Components"
 
 # Full inspection dump (tokens + components + styles)
-bun run src/index.ts inspect design.fig --pretty
-bun run src/index.ts inspect design.fig --page "All"
+figma-cli inspect design.fig --pretty
+figma-cli inspect design.fig --page "All"
 
 # Pipe to agent
-bun run src/index.ts inspect design.fig | your-agent-skill
+figma-cli inspect design.fig | your-agent-skill
 ```
 
 ## Output
